@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index-main.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <title>Encriptador de Texto</title>
+    </head>
+
+    <body>
+        <main>
+            <div class ="parent-barra">
+                <div id="parent-barra-col1"> <img src="assets\encript.png" width="50vh" style="background-color: #6482ad00;"> </div>
+                <div id="parent-barra-col2"> 
+                    <h1 id="barra-titulo"> </h1>
+                </div>
+            </div>
+
+            <div class="area-textos">
+                <div class="area-encriptado">
+                    <textarea id="encriptado" placeholder="Su Texto Aqui"></textarea>
+                    <br>
+                    <p id="info-etiqueta"> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg> Solo letras minusculas y sin acentos</p>
+                    <br>
+
+                    <div id="claveCifrado_div">
+                        <label>Clave de Cifrado:</label>
+                        <input type="text" id="clave_cifrado">
+                    </div>
+
+                    <div id="buttones-div">
+                        <button class="button-enc" id="button-encriptar"><img id="candado-abr" src="assets\candado.png"><span style="background-color: #6482ad00;">Encriptar</span></button>
+                        <button class="button-enc" id="button-desencriptar"><img id="candado-abr" src="assets\candado_open.png"><span style="background-color: #6482ad00;">Desencriptar</span></button>
+                    </div>
+                </div>
+
+                <div class="area-desencriptado">
+                    <br>
+                    <img id="person-encrip" src="assets\person.png" width="200px">
+                    <br>
+                    <div class="texto-img" style="background-color: #6482ad00;"><p style="background-color: #6482ad00;" id="titulo-desencr">Ningún mensaje fue encontrado <br>Ingresa el texto que deseas encriptar o desencriptar.</p></div>
+                    <textarea id="desencriptado" placeholder="Ningún mensaje fue encontrado" readonly></textarea>
+                    <br>
+                    <button class="Btn" id="btn_copiar" onclick="copiarContenido()">
+                        <span class="text">Copiar</span>
+                        <span class="svgIcon">
+                          <svg style="background-color: #6482ad00;" fill="white" viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg"><path d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"></path></svg>
+                        </span>
+                      </button>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="footer">
+            &copy; Jorge Hernandez 2024
+            <button class="button-footer" onclick="window.location.href = 'https://ide.geeksforgeeks.org';"><img src=assets\github.png width="20px" height="20px" style="background-color: #F5EDED"></button>
+            <button class="button-footer" onclick="window.location.href = 'https://ide.geeksforgeeks.org';"><img src=assets\linkedin.png width="20px" height="20px"  style="background-color: #F5EDED"></button>
+        </footer>
+
+    </body>
+
+    <script src="index-main.js"></script>
+</html>
